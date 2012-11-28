@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, TrumpetApp!</string>
+    <string name="app_name">Trumpet</string>
+    
+    
+    <string name="api_key_twitpic">df9354068176c743cd1e500a186dd075</string>
+    <string name="api_key_yfrog">236BNPQT156728aaf4c4e704bb38b20ad79f204c</string>
+</resources>

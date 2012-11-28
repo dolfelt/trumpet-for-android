@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.ofamilymedia.trumpet"
+      android:versionCode="17"
+      android:versionName="1.0.2"
+      android:installLocation="auto">
+    <application android:name=".TrumpetBase" android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@style/MyTheme">
+        <activity android:name=".TrumpetApp" android:configChanges="orientation" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.SEND" />
+    			<category android:name="android.intent.category.DEFAULT" />
+    			<data android:mimeType="image/*" />
+    			<data android:mimeType="text/plain" />
+    		</intent-filter>
+    		<intent-filter>
+ 				<action android:name="android.intent.action.VIEW" />
+ 				<data android:scheme="http" android:host="twitter.com" />
+ 				<category android:name="android.intent.category.DEFAULT" />
+ 				<category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+    		<intent-filter>
+ 				<action android:name="android.intent.action.VIEW" />
+ 				<data android:scheme="trumpet" android:host="app" />
+ 				<category android:name="android.intent.category.DEFAULT" />
+ 				<category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+    		</activity>
+
+	    <activity android:name=".TrumpetUser" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetItem" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetSendTweet" android:windowSoftInputMode="stateVisible|adjustResize" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetProfile" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetList" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetUserList" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetSearch" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetImage" android:configChanges="orientation"></activity>
+	    <activity android:name=".TrumpetPreferences"></activity>
+
+		<service android:enabled="true" android:name=".NotificationService" />
+
+    </application>
+
+	<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="4"></uses-sdk>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+</manifest> 

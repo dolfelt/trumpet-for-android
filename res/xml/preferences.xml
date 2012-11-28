@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">     
+	<PreferenceCategory android:title="Trumpet Settings">
+		<CheckBoxPreference android:title="Highlight in Tweet List" android:summary="Select this option to highlight links, users and hash tags in the list." android:key="list_highlight"></CheckBoxPreference>
+		<ListPreference android:title="List Cached Length" android:key="cache_length" android:entries="@array/cache_length" android:entryValues="@array/cache_length_values" android:defaultValue="50"></ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Tweet Settings">
+		<PreferenceScreen android:title="URL Shortening">
+			<ListPreference android:title="URL Shortening Service" android:key="shortening_service" android:entries="@array/shortening_services" android:entryValues="@array/shortening_service_values" android:defaultValue="bitly"></ListPreference>
+			<EditTextPreference android:key="bitly_username" android:title="Bit.ly Username" android:dialogTitle="Bit.ly Username"></EditTextPreference>
+			<EditTextPreference android:key="bitly_key" android:title="Bit.ly API Key" android:dialogTitle="Bit.ly API Key"></EditTextPreference>
+		</PreferenceScreen>
+		<PreferenceScreen android:title="Media Upload Service">
+			<ListPreference android:title="Upload Service" android:key="image_upload" android:entries="@array/image_upload_services" android:defaultValue="yFrog" android:entryValues="@array/image_upload_services"></ListPreference>
+			<EditTextPreference android:title="Custom Upload URL" android:key="image_upload_endpoint"></EditTextPreference>
+		</PreferenceScreen>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Background Notifications">
+		<CheckBoxPreference android:key="enable_notifications" android:title="Enable Notifications" android:summary="Enable background notifications. Please note that this can decrease battery life." android:defaultValue="true"></CheckBoxPreference>
+		<PreferenceScreen android:title="Notification Settings" android:dependency="enable_notifications">
+			<ListPreference android:title="Update Every..." android:summary="How often do you want new info?" android:key="notify_update" android:entries="@array/update_interval" android:entryValues="@array/update_interval_values" android:defaultValue="15"></ListPreference>
+			<PreferenceCategory android:title="Check For">
+				<CheckBoxPreference android:key="notify_tweets" android:title="Tweets" android:defaultValue="false"></CheckBoxPreference>
+				<CheckBoxPreference android:key="notify_mentions" android:title="Mentions" android:defaultValue="true"></CheckBoxPreference>
+				<CheckBoxPreference android:key="notify_messages" android:title="Direct Messages" android:defaultValue="true"></CheckBoxPreference>
+			</PreferenceCategory>
+			<PreferenceCategory android:title="Alert Settings">
+				<CheckBoxPreference android:key="notify_vibrate" android:title="Vibrate Phone" android:defaultValue="true"></CheckBoxPreference>
+			</PreferenceCategory>
+		</PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>

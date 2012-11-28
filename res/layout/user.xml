@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+    
+	<RelativeLayout android:id="@+id/header"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="40dp"
+	    android:gravity="center_vertical"
+	    android:paddingTop="0dp"
+	    android:paddingLeft="6dp"
+	    android:background="@drawable/header"
+	    >
+	   	<Button android:id="@+id/title"
+	   		android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_centerVertical="true"
+	   		android:textColor="#FFFFFF"
+	   		android:textSize="15dp" 
+	   		android:textStyle="bold"
+	   		android:text="Trumpet for Android"
+	   		android:background="@drawable/btn_inset" />
+	   	<LinearLayout
+	   		android:layout_height="fill_parent"
+	   		android:layout_width="wrap_content"
+	   		android:layout_alignParentRight="true"
+	   		android:gravity="center_vertical">
+		   	<ProgressBar android:id="@+id/header_progress"
+		        style="?android:attr/progressBarStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="3dp"
+		        android:visibility="invisible" />
+		    
+		    <ImageButton android:id="@+id/title_tweet" 
+		    	android:background="@drawable/title_button" 
+		    	android:src="@drawable/title_bubble" android:layout_width="40dp" android:layout_height="fill_parent"
+		    	android:visibility="gone" />
+	
+		    <ImageButton android:id="@+id/title_refresh" 
+		    	android:background="@drawable/title_button" 
+		    	android:src="@drawable/title_refresh" android:layout_width="40dp" android:layout_height="fill_parent"
+		    	android:visibility="gone" />
+		    
+	    </LinearLayout>
+	</RelativeLayout>
+	
+	<ViewFlipper android:id="@+id/view_container" android:background="#FFFFFF"
+		android:layout_width="fill_parent"
+		android:layout_below="@id/header"
+		android:layout_marginBottom="44dp"
+		android:layout_height="fill_parent"
+		android:layout_weight="1.0"
+		>
+		
+	</ViewFlipper>
+	
+	<RelativeLayout android:id="@+id/toolbar"
+		android:layout_width="fill_parent"
+		android:layout_height="50dp"
+		android:layout_alignParentBottom="true"
+		>
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_marginTop="6dp"
+			android:background="@drawable/footer"
+			android:layout_alignParentBottom="true"
+			>
+			<LinearLayout android:id="@+id/bottom_container"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			   	android:layout_marginTop="0dp" android:gravity="center">
+			    
+			        <ImageButton android:id="@+id/button_home"
+			        	android:src="@drawable/icon_bubble"
+			        	android:background="@null"
+			    		android:layout_width="32dp"
+			    		android:layout_height="42dp"
+			    		android:layout_weight="1"
+						/>
+			        <ImageButton android:id="@+id/button_mentions"
+			        	android:src="@drawable/icon_mentions"
+			        	android:background="@null"
+			    		android:layout_width="32dp"
+			    		android:layout_height="42dp"
+			    		android:layout_weight="1"
+						/>
+			        <ImageButton android:id="@+id/button_messages"
+			        	android:src="@drawable/icon_messages"
+			        	android:background="@null"
+			    		android:layout_width="32dp"
+			    		android:layout_height="42dp"
+			    		android:layout_weight="1"
+						/>
+			        <ImageButton android:id="@+id/button_search"
+			        	android:src="@drawable/icon_search"
+			        	android:background="@null"
+			    		android:layout_width="32dp"
+			    		android:layout_height="42dp"
+			    		android:layout_weight="1"
+						/>
+			        <ImageButton android:id="@+id/button_more"
+			        	android:src="@drawable/icon_more"
+			        	android:background="@null"
+			    		android:layout_width="32dp"
+			    		android:layout_height="42dp"
+			    		android:layout_weight="1"
+						/>
+			    
+			</LinearLayout>
+			
+			
+		</RelativeLayout>
+		
+		<ImageView android:id="@+id/arrow" android:layout_alignParentTop="true" android:layout_marginLeft="21dp" android:layout_width="18dp" android:layout_height="8dp" android:src="@drawable/footer_arrow" android:scaleType="fitXY" />
+	
+	</RelativeLayout>
+</RelativeLayout>

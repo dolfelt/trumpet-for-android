@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BoldListItem">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="44dp">
+		<TextView android:id="@+id/text"
+			style="@style/BoldListItemText" />
+	</RelativeLayout>
+	
+	<View android:background="#11000000" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:layout_height="1px" />
+		
+</RelativeLayout>

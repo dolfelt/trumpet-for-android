@@ -1,0 +1,8 @@
+Quit program
+enlarge profile picture
+Option to turn off gradients
+
+
+FUTURE:
+
+Implement hardware checks for optimum performance by default

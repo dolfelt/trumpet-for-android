@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:orderInCategory="0" android:title="New Tweet" android:id="@+id/new_tweet" android:icon="@drawable/menu_add" />
+	<item android:orderInCategory="0" android:title="Refresh" android:id="@+id/refresh" android:icon="@drawable/menu_refresh" />
+	<item android:orderInCategory="0" android:title="Settings" android:id="@+id/settings" android:icon="@drawable/menu_settings"></item>
+</menu>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	
+	<!--ImageView 
+		android:layout_width="fill_parent"
+	    android:layout_height="20dp"
+	    android:src="@drawable/row_shadow"
+	    android:layout_gravity="bottom"
+		android:scaleType="fitXY"/-->
+	
+	<RelativeLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="3dp">
+			<ImageView android:id="@+id/icon"
+				android:layout_width="48dp"
+				android:layout_height="48dp"
+				android:layout_marginLeft="4dp"
+				android:layout_marginTop="4dp"
+				/>
+ 	        <TextView android:id="@+id/screenname"
+ 	        	android:text=""
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="2dp"
+		        android:layout_marginLeft="62dp"
+		        android:textSize="13dp"
+		        android:textStyle="bold"
+		        android:textColor="#000000" />
+ 	        
+ 	        <TextView android:id="@+id/source"
+ 	        	android:text=""
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="4dp"
+		        android:layout_marginLeft="6dp"
+		        android:layout_toRightOf="@id/screenname"
+		        android:textSize="12dp"
+		        android:textColor="#999999" />
+	
+			<ImageView android:id="@+id/corner"
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"
+		        android:layout_alignParentRight="true"
+		        android:scaleType="fitXY"
+		        android:visibility="gone" />
+		
+			<TextView android:id="@+id/time"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="3dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_toLeftOf="@id/corner"
+		        android:layout_alignWithParentIfMissing="true"
+		        android:textStyle="bold"
+		        android:textSize="12dp"
+		        android:textColor="#888888" />
+
+			<LinearLayout 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_toLeftOf="@+id/time"
+				android:layout_marginTop="4dp">
+				<ImageView android:id="@+id/has_location"
+			        android:layout_width="10dp"
+			        android:layout_height="14dp"
+			        android:layout_marginRight="5dp"
+			        android:visibility="gone"
+			        android:src="@drawable/list_item_location" />
+				<ImageView android:id="@+id/has_media"
+			        android:layout_width="17dp"
+			        android:layout_height="14dp"
+			        android:layout_marginRight="5dp"
+			        android:visibility="gone"
+			        android:src="@drawable/list_item_media" />
+			</LinearLayout>
+
+		    <TextView android:id="@+id/text"
+		    	android:layout_marginTop="21dp"
+		        android:layout_marginLeft="62dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:textColor="#000000"
+		        android:textSize="13dp" android:bufferType="spannable"/>
+
+			<TextView android:id="@+id/more_info"
+		       	android:visibility="gone"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/text"
+		        android:layout_marginTop="1dp"
+		        android:layout_marginLeft="62dp"
+		        android:textStyle="normal"
+		        android:textSize="10dp"
+		        android:textColor="#888888" />
+		
+	</RelativeLayout>
+	
+	<View android:background="#11000000" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:layout_height="1px" />
+	
+</RelativeLayout>

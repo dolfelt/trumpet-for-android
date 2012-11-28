@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:orderInCategory="0" android:title="Reply All" android:id="@+id/reply_all" 
+		android:icon="@drawable/menu_reply_all" />
+	<item android:orderInCategory="0" android:title="Retweet" android:id="@+id/retweet" 
+		android:icon="@drawable/menu_retweet" />
+	<item android:orderInCategory="0" android:title="Message" android:id="@+id/message" 
+		android:icon="@drawable/menu_message" />
+	<item android:orderInCategory="0" android:title="Quote" android:id="@+id/quote" 
+		android:icon="@drawable/menu_quote" />
+	<item android:orderInCategory="0" android:title="More" android:id="@+id/more" 
+		android:icon="@drawable/menu_more">
+		<menu>
+			<!-- item android:title="Favorite" android:id="@+id/favorite" /-->
+			<item android:title="Copy to Clipboard" android:id="@+id/copy" />
+		</menu>
+	</item>
+</menu>

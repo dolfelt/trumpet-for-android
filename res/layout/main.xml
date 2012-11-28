@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+    
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+        
+        <include layout="@layout/header_include" />
+	
+		<ListView android:id="@android:id/list"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent"
+		    android:drawSelectorOnTop="false"
+		    android:listSelector="@drawable/list_background"
+		    android:cacheColorHint="#FFFFFF"
+		    android:divider="#FFFFFF"
+		    android:dividerHeight="0px" />
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/no_accounts"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:orientation="vertical"
+		android:gravity="center_horizontal"
+		android:visibility="gone">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="It appears as though you have not added any accounts..."
+			android:textSize="18dp"
+			android:gravity="center_horizontal"
+			android:textColor="#333333" />
+		
+		<Button android:id="@+id/add_account_button"
+			style="@style/ActionButton"
+			android:text="Add an account"
+			android:layout_marginTop="10dp" />
+		
+	</LinearLayout>
+	
+</RelativeLayout>

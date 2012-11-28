@@ -1,0 +1,50 @@
+<resources>
+	<string-array name="shortening_services">
+		<item>bit.ly</item>
+		<item>j.mp</item>
+	</string-array>
+	<string-array name="shortening_service_values">
+		<item>bitly</item>
+		<item>jmp</item>
+	</string-array>
+
+	<string-array name="image_upload_services">
+		<item>yFrog</item>
+		<item>Twitpic</item>
+		<item>Custom</item>
+	</string-array>
+
+	<string-array name="update_interval">
+		<item>5 min</item>
+		<item>10 min</item>
+		<item>15 min (saves battery)</item>
+		<item>30 min (saves battery)</item>
+		<item>1 hour (saves battery)</item>
+		<item>2 hours</item>
+		<item>4 hours</item>
+		<item>12 hours (saves battery)</item>
+	</string-array>
+	<string-array name="update_interval_values">
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+		<item>30</item>
+		<item>60</item>
+		<item>120</item>
+		<item>240</item>
+		<item>720</item>
+	</string-array>
+	
+	<string-array name="cache_length">
+		<item>25 tweets</item>
+		<item>50 tweets</item>
+		<item>100 tweets</item>
+		<item>200 tweets</item>
+	</string-array>
+	<string-array name="cache_length_values">
+		<item>25</item>
+		<item>50</item>
+		<item>100</item>
+		<item>200</item>
+	</string-array>
+</resources>

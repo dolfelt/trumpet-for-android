@@ -14,6 +14,7 @@ import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.auth.AccessToken;
 import twitter4j.conf.Configuration;
 
+import com.bugsense.trace.BugSenseHandler;
 import com.ofamilymedia.trumpet.classes.Account;
 import com.ofamilymedia.trumpet.classes.CustomExceptionHandler;
 import com.ofamilymedia.trumpet.classes.ImageLoader;
@@ -52,7 +53,8 @@ public class TrumpetBase extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Thread.setDefaultUncaughtExceptionHandler(new CustomExceptionHandler("/sdcard/data/trumpet", "http://ofamilymedia.com/trumpet/stacktrace.php"));
+        BugSenseHandler.initAndStartSession(this, "a4a56f7e");
+        //Thread.setDefaultUncaughtExceptionHandler(new CustomExceptionHandler("/sdcard/data/trumpet", "http://ofamilymedia.com/trumpet/stacktrace.php"));
         
         imageLoader = new ImageLoader(this);
         
